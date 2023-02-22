@@ -10,7 +10,7 @@
             <div class="image img-cir img-120">
                 <img src="{{ asset('template/images/icon/avatar-big-01.jpg') }}" alt="John Doe" />
             </div>
-            <h4 class="name">{{ Auth()->user()->prenom }} {{ Auth()->user()->nom }}</h4>
+            <h4 class="name">{{ Auth()->user()->prenom }}</h4>
             <a href="#">Sign out</a>
         </div>
         <nav class="navbar-sidebar2">
