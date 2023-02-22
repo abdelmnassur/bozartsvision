@@ -46,6 +46,7 @@ require __DIR__.'/auth.php';
 
 
 Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('home1', [MainController::class, 'home1'])->name('home1');
 
 Route::get('admin_dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware(['auth']);;
 

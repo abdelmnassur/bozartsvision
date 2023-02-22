@@ -8,6 +8,15 @@ use Illuminate\Http\Response;
 
 class MainController extends Controller
 {
+    public function home()
+    {
+        return view('home');
+    }
+
+    public function home1()
+    {
+        return view('home1');
+    }
     /**
      * Display a listing of the resource.
      */
@@ -64,8 +73,4 @@ class MainController extends Controller
         //
     }
 
-    public function home()
-    {
-        return view('home');
-    }
 }
