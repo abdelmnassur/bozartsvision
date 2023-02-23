@@ -28,9 +28,9 @@ use Inertia\Inertia;
 //     ]);
 // });
 
-// Route::get('/', function () {
-//      return view('home');
-// })->name('home');
+ Route::get('/', function () {
+      return view('home');
+ })->name('home');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');

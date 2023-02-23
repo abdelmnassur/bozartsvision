@@ -41,7 +41,7 @@ class UserSeeder extends Seeder
             'prenom' => 'Francis',
             'genre' => 'homme',
             'telephone' => '57644676',
-            'email' => 'kientega.francis@gmail.com',
+            'email' => 'kientegafrancis@gmail.com',
             'password' => Hash::make('123123123') ,
         ]);
 
@@ -74,6 +74,7 @@ class UserSeeder extends Seeder
             'nom' => 'Artiste2',
             'prenom' => 'test 2',
             'genre' => 'homme',
+            'status' => 0,
             'telephone' => '22222222',
             'email' => 'artistetest2@test.com',
             'password' => Hash::make('123123123') ,
@@ -133,6 +134,7 @@ class UserSeeder extends Seeder
             'nom' => 'User',
             'prenom' => 'test 3',
             'genre' => 'femme',
+            'status' => 0,
             'telephone' => '12345677',
             'email' => 'usertest3@test.com',
             'password' => Hash::make('123123123') ,

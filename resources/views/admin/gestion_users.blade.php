@@ -19,32 +19,26 @@
                                 </thead>
                                 <tbody>
                                     @foreach ($users as $user)
-                                    <tr>
-                                        <td> {{ $user->prenom }} </td>
-                                        <td> {{ $user->telephone }} </td>
-                                        <td> {{ $user->email }} </td>
-                                        <td> {{ $user->status }} </td>
-                                        <td>
-                                            @if ($user->status)
-                                                <div class="card-body">
-                                                    <label class="switch switch-text switch-success switch-pill">
-                                                        <input type="checkbox" class="switch-input" checked="">
-                                                        <span data-on="On" data-off="Off" class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
-                                                    </label>
-                                                </div>
-                                                @else
-                                                <div class="card-body">
-                                                    <label class="switch switch-text switch-success switch-pill">
-                                                        <input type="checkbox" class="switch-input" checked="true">
-                                                        <span data-on="On" data-off="Off" class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
-                                                    </label>
-                                                </div>
-                                            @endif
-                                            
-                                        </td>
-                                    </tr>
+                                        <tr>
+                                            <td> {{ $user->prenom }} </td>
+                                            <td> {{ $user->telephone }} </td>
+                                            <td> {{ $user->email }} </td>
+                                            <td> {{ $user->status }} </td>
+                                            <td>
+                                        
+                                                    
+                                                    <div class="card-body">
+                                                        <label class="switch switch-text switch-success switch-pill">
+                                                            <input type="checkbox" class="switch-input"
+                                                                @if ($user->status == 1) checked="true" @endif>
+                                                            <span data-on="On" data-off="Off"
+                                                                class="switch-label"></span>
+                                                            <span class="switch-handle"></span>
+                                                        </label>
+                                                    </div>
+
+                                            </td>
+                                        </tr>
                                     @endforeach
                                 </tbody>
                             </table>
@@ -56,3 +50,7 @@
         </div>
     </div>
 </x-admin-basic>
+
+<script>
+    //$('.card-body').hide();
+</script>

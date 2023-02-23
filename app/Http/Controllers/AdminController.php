@@ -8,6 +8,7 @@ use Illuminate\Http\Response;
 use App\Models\Artiste;
 use App\Models\User;
 use App\Models\Admin;
+use Illuminate\Support\Facades\DB;
 
 class AdminController extends Controller
 {
@@ -15,6 +16,8 @@ class AdminController extends Controller
     {
         $admins = Admin::all();
         $users = User::all();
+        //dd($admins[0]->user);
+        //$users = DB::select('SELECT * FROM users MINUS (SELECT u.* FROM users u, admins a WHERE a.user_id=u.id UNION SELECT u.* FROM users u,artistes t WHERE t.user_id=u.id)');
         $artistes = Artiste::all();
         return view('admin/dashboard', compact('users', 'artistes', 'admins'));
     }
@@ -86,6 +89,4 @@ class AdminController extends Controller
     {
         //
     }
-
-    
 }
