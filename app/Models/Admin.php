@@ -9,7 +9,6 @@ class Admin extends Model
 {
     protected $fillable = [
         'user_id',
-        'status',
     ];
     use HasFactory;
 }

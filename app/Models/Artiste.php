@@ -11,7 +11,6 @@ class Artiste extends Model
         'user_id',
         'logo',
         'slogan',
-        'status',
     ];
     use HasFactory;
 }

@@ -18,8 +18,9 @@ return new class extends Migration
             $table->enum('genre',['homme','femme']);
             $table->integer('telephone')->unique();
             $table->string('email')->unique();
-            $table->string('profil');
+            $table->string('profil')->nullable();
             $table->string('photo')->nullable();
+            $table->boolean('status')->default(1);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->enum('type',['root','admin','artiste','user'])->default('user');
