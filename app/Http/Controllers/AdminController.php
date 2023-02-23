@@ -28,7 +28,7 @@ class AdminController extends Controller
     public function admin_gestion_artistes()
     {
         $artistes = Artiste::all();
-        return view('admin/gestion_users', compact('artistes'));
+        return view('admin/gestion_artistes', compact('artistes'));
     }
 
     /**

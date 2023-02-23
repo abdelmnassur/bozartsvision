@@ -8,9 +8,9 @@ use Illuminate\Http\Response;
 
 class ArtisteController extends Controller
 {
-    public function admin_dashboard()
+    public function artiste_dashboard()
     {
-        return view('artiste/dashboard');
+        return view('artiste/artiste_dashboard');
     }
     /**
      * Display a listing of the resource.
