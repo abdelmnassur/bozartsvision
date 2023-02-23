@@ -8,6 +8,7 @@ use App\Models\Artiste;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Auth\User as AuthUser;
+use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
@@ -26,7 +27,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('123123123') ,
         ]);
 
-        /*User::create([
+        User::create([
             'nom' => 'TRORE',
             'prenom' => 'Harouna',
             'genre' => 'homme',
@@ -40,7 +41,7 @@ class UserSeeder extends Seeder
             'prenom' => 'Francis',
             'genre' => 'homme',
             'telephone' => '57644676',
-            'email' => 'kientegafrancis@gmail.com',
+            'email' => 'kientega.francis@gmail.com',
             'password' => Hash::make('123123123') ,
         ]);
 
@@ -59,7 +60,7 @@ class UserSeeder extends Seeder
         /* END ADMINS */
 
 
-        /* ARTISTES 
+        /* ARTISTES  */
         User::create([
             'nom' => 'Artiste',
             'prenom' => 'test 1',
@@ -70,7 +71,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'nom' => 'Artiste',
+            'nom' => 'Artiste2',
             'prenom' => 'test 2',
             'genre' => 'homme',
             'telephone' => '22222222',
@@ -79,7 +80,7 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'nom' => 'Artiste',
+            'nom' => 'Artiste3',
             'prenom' => 'test 3',
             'genre' => 'homme',
             'telephone' => '33333333',
@@ -109,7 +110,7 @@ class UserSeeder extends Seeder
         /* END ARTISTES */
         
 
-        /* USERS 
+        /* USERS */
         User::create([
             'nom' => 'User',
             'prenom' => 'test 1',
