@@ -15,7 +15,7 @@
                         </div>
                     </a>
 
-                    <div class="col-md-6 col-lg-3">
+                    <a class="col-md-6 col-lg-3" href="{{ route('admin_gestion_artistes') }}">
                         <div class="statistic__item">
                             <h2 class="number">{{ count($artistes) }}</h2>
                             <span class="desc">Artistes</span>
@@ -23,7 +23,8 @@
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item">
                             <h2 class="number">1,086</h2>
