@@ -23,6 +23,7 @@
                                         <td> {{ $user->prenom }} </td>
                                         <td> {{ $user->telephone }} </td>
                                         <td> {{ $user->email }} </td>
+                                        <td> {{ $user->status }} </td>
                                         <td>
                                             @if ($user->status)
                                                 <div class="card-body">
@@ -41,9 +42,6 @@
                                                     </label>
                                                 </div>
                                             @endif
-                                            
-                                        </td>
-                                        <td>
                                             
                                         </td>
                                     </tr>
