@@ -4,7 +4,8 @@
         <div class="section__content section__content--p30">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-md-6 col-lg-3">
+
+                    <a class="col-md-6 col-lg-3" href="{{ route('admin_gestion_users') }}">
                         <div class="statistic__item">
                             <h2 class="number">{{ count($users) }}</h2>
                             <span class="desc">Utilisateurs</span>
@@ -12,7 +13,8 @@
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>
                         </div>
-                    </div>
+                    </a>
+
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item">
                             <h2 class="number">{{ count($artistes) }}</h2>

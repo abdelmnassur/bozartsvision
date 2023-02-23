@@ -27,14 +27,6 @@
                                     <label>Prénom</label>
                                     <input class="au-input au-input--full" type="text" name="prenom" placeholder="Prénom" value="{{ old('prenom') }}">
                                 </div>
-
-                                <div class="form-group">
-                                    @error('profil')
-                                    <small  class="text-danger">{{ $message }}</small>
-                                    @enderror
-                                    <label>Profil</label>
-                                    <input class="au-input au-input--full" type="text" name="profil" placeholder="profil" value="{{ old('profil') }}">
-                                </div>
                                 
                                 <div class="form-group">
                                     @error('genre')

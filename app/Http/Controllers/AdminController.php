@@ -19,6 +19,12 @@ class AdminController extends Controller
         return view('admin/dashboard', compact('users', 'artistes', 'admins'));
     }
 
+    public function admin_gestion_users()
+    {
+        $users = User::all();
+        return view('admin/gestion_users', compact('users'));
+    }
+
     /**
      * Display a listing of the resource.
      */

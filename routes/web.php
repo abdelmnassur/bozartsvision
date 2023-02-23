@@ -48,6 +48,9 @@ require __DIR__.'/auth.php';
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('home1', [MainController::class, 'home1'])->name('home1');
 
-Route::get('admin_dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware(['auth']);;
+/* Route liées à ADMIN */
+Route::get('admin_dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware(['auth']);
+Route::get('admin_gestion_users', [AdminController::class, 'admin_gestion_users'])->name('admin_gestion_users')->middleware(['auth']);
+/* END */
 
-Route::get('artiste_dashboard', [ArtisteController::class, 'artiste_dashboard'])->name('artiste_dashboard')->middleware(['auth']);;
+Route::get('artiste_dashboard', [ArtisteController::class, 'artiste_dashboard'])->name('artiste_dashboard')->middleware(['auth']);

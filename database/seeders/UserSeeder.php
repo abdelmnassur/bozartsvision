@@ -26,7 +26,7 @@ class UserSeeder extends Seeder
             'password' => Hash::make('123123123') ,
         ]);
 
-        User::create([
+        /*User::create([
             'nom' => 'TRORE',
             'prenom' => 'Harouna',
             'genre' => 'homme',
@@ -59,7 +59,7 @@ class UserSeeder extends Seeder
         /* END ADMINS */
 
 
-        /* ARTISTES */
+        /* ARTISTES 
         User::create([
             'nom' => 'Artiste',
             'prenom' => 'test 1',
@@ -109,7 +109,7 @@ class UserSeeder extends Seeder
         /* END ARTISTES */
         
 
-        /* USERS */
+        /* USERS 
         User::create([
             'nom' => 'User',
             'prenom' => 'test 1',
