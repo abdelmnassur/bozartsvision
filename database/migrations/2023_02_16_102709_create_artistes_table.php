@@ -13,14 +13,11 @@ return new class extends Migration
     {
         Schema::create('artistes', function (Blueprint $table) {
             $table->id();
-
             $table->unsignedBigInteger('user_id')->index('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-
-            $table->string('logo');
-            $table->string('slogan');
+            $table->string('logo')->nullable();
+            $table->string('slogan')->nullable();
             $table->boolean('status')->default(0);
-
             $table->timestamps();
         });
     }
