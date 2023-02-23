@@ -42,11 +42,9 @@ class AuthenticatedSessionController extends Controller
 
         $artiste = Artiste::where("user_id", $user)->first('id');
 
-        $users = User::all();
-
         if(isset($admin))
         {
-            return redirect()->route('admin_dashboard', compact(users));
+            return redirect()->route('admin_dashboard');
         }
 
         if(isset($artiste))
@@ -68,6 +66,6 @@ class AuthenticatedSessionController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('home');
     }
 }

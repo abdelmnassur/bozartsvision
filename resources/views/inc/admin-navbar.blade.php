@@ -77,17 +77,15 @@
                     </ul>
                 </li>
                 <li class="has-sub">
-                    <a onClick="event.preventDefault(); document.getElementById('deconnection').submit()" href="">
-                        <div class="account-dropdown__footer">
-                            <i class="zmdi zmdi-power"></i>Déconnexion
-                            
-                            <form action="{{ route('logout') }}" method="post" id="deconnection">
-                                @csrf
-                                @method('post')
-                            </form>
 
-                        </div>
+                    <a onClick="event.preventDefault(); document.getElementById('deconnection').submit()" href="">
+                        <i class="zmdi zmdi-power"></i>Déconnexion
                     </a>
+                    <form action="{{ route('logout') }}" method="post" id="deconnection">
+                        @csrf
+                        @method('post')
+                    </form>
+
                 </li>
                 {{-- </li>
                 <li class="has-sub">
