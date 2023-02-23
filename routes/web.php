@@ -51,6 +51,7 @@ Route::get('home1', [MainController::class, 'home1'])->name('home1');
 /* Route liées à ADMIN */
 Route::get('admin_dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware(['auth']);
 Route::get('admin_gestion_users', [AdminController::class, 'admin_gestion_users'])->name('admin_gestion_users')->middleware(['auth']);
+Route::get('admin_gestion_artistes', [AdminController::class, 'admin_gestion_artistes'])->name('admin_gestion_artistes')->middleware(['auth']);
 /* END */
 
 Route::get('artiste_dashboard', [ArtisteController::class, 'artiste_dashboard'])->name('artiste_dashboard')->middleware(['auth']);
