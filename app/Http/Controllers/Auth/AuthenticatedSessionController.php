@@ -40,11 +40,13 @@ class AuthenticatedSessionController extends Controller
 
         $admin = Admin::where('user_id', $user)->first('id');
 
-        //$artiste = Artiste::where("user_id", $user)->first('id');
+        $artiste = Artiste::where("user_id", $user)->first('id');
+
+        $users = User::all();
 
         if(isset($admin))
         {
-            return redirect()->route('admin_dashboard');
+            return redirect()->route('admin_dashboard', compact(users));
         }
 
         if(isset($artiste))

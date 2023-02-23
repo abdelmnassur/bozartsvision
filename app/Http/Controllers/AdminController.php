@@ -5,12 +5,17 @@ namespace App\Http\Controllers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
+use App\Models\Artiste;
+use App\Models\User;
+use App\Models\Admin;
 
 class AdminController extends Controller
 {
     public function admin_dashboard()
     {
-        return view('admin/dashboard');
+        $users = User::all();
+        $artistes = Artiste::all();
+        return view('admin/dashboard', compact('users', 'artistes'));
     }
 
     /**
