@@ -13,9 +13,10 @@ class AdminController extends Controller
 {
     public function admin_dashboard()
     {
+        $admins = Admin::all();
         $users = User::all();
         $artistes = Artiste::all();
-        return view('admin/dashboard', compact('users', 'artistes'));
+        return view('admin/dashboard', compact('users', 'artistes', 'admins'));
     }
 
     /**

@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-md-6 col-lg-3">
                         <div class="statistic__item">
-                            <h2 class="number">{{ count($users) }}</h2>
+                            <h2 class="number">{{ count($admins) }}</h2>
                             <span class="desc">Utilisateurs</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
