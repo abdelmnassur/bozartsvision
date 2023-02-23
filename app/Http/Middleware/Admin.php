@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Illuminate\Middleware\Admin as Middleware;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
@@ -15,6 +16,19 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        return $next($request);
+        //return $next($request);
+        
+        $user = Auth()->user()->id;
+
+        $admin = Admin::where('user_id', $user)->first('id');
+
+        if (Auth::user() &&  isset($admin)) 
+        {
+            return $next($request);
+        }
+        else
+        {
+            return redirect('/')->with('error','Vous n\'êtes pas un admin');
+        }
     }
 }
