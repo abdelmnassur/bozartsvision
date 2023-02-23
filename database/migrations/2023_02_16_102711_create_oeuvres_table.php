@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('oeuvres', function (Blueprint $table) {
             $table->id();
 
-
             $table->unsignedBigInteger('artiste_id')->index('artiste_id');
             $table->foreign('artiste_id')->references('id')->on('artistes')->onDelete('cascade');
 
@@ -27,7 +26,6 @@ return new class extends Migration
             $table->date('date_creation');
             $table->decimal('prix',10,2);
             $table->integer('appreciation')->default(0);
-
             $table->timestamps();
         });
     }
