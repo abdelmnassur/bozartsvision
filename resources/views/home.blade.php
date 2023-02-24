@@ -30,7 +30,7 @@
                   </div>
                   <div class="typo-articles">
                     <p>
-                      Nous travaillons sur le backend revenez plustard &#128515; !!!
+                      Nous travaillons sur le backend revenez plustard <big>&#128515;</big> !!!
                     </p>
                   </div>
                 </div>

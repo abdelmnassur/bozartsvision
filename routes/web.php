@@ -44,8 +44,6 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-
-Route::get('home', [MainController::class, 'home'])->name('home');
 Route::get('home1', [MainController::class, 'home1'])->name('home1');
 
 /* Route liées à ADMIN */
