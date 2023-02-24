@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ArtisteController;
 use Illuminate\Foundation\Application;
@@ -28,9 +29,9 @@ use Inertia\Inertia;
 //     ]);
 // });
 
- Route::get('/', function () {
-      return view('home');
- })->name('home');
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
@@ -44,12 +45,14 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+//Route::get('home', [MainController::class, 'home'])->name('home');
 Route::get('home1', [MainController::class, 'home1'])->name('home1');
 
 /* Route liées à ADMIN */
 Route::get('admin_dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware(['auth']);
 Route::get('admin_gestion_users', [AdminController::class, 'admin_gestion_users'])->name('admin_gestion_users')->middleware(['auth']);
 Route::get('admin_gestion_artistes', [AdminController::class, 'admin_gestion_artistes'])->name('admin_gestion_artistes')->middleware(['auth']);
+Route::get('showUser/{id}', [UserController::class, 'show'])->name('show')->middleware(['auth']);
 /* END */
 
 Route::get('artiste_dashboard', [ArtisteController::class, 'artiste_dashboard'])->name('artiste_dashboard')->middleware(['auth']);

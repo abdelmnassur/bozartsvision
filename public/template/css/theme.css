@@ -4708,8 +4708,8 @@ section {
     color: #fff;
     font-weight: 400;
     text-transform: capitalize;
-    padding: 18px 40px;
-    padding-right: 10px;
+    /* padding: 18px 40px;
+    padding-right: 10px; */
 }
 
 .table-data3 thead tr th:first-child {
@@ -4724,16 +4724,16 @@ section {
     border-top-right-radius: 3px;
 }
 
-.table-data3 thead tr th:last-child {
+/*.table-data3 thead tr th:last-child {
     text-align: right;
     padding-right: 50px;
 }
 
 .table-data3 tbody tr td:last-child {
-    text-align: right;
-    padding-right: 50px;
+     text-align: right;
+    padding-right: 50px; 
 }
-
+*/
 .table-data3 tbody tr {
     border-left: 1px solid #e5e5e5;
     border-right: 1px solid #e5e5e5;
@@ -4756,8 +4756,8 @@ section {
     background: #fff;
     font-size: 14px;
     color: #808080;
-    padding: 12px 40px;
-    padding-right: 10px;
+    /* padding: 12px 40px;
+    padding-right: 10px; */
 }
 
 .table-data3 tbody td.process {

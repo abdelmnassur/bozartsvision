@@ -30,6 +30,7 @@
 
         <!-- Main CSS-->
         <link href="{{ asset('template/css/theme.css') }}" rel="stylesheet" media="all">
+        <link href="{{ asset('template/css/style.css') }}" rel="stylesheet" media="all">
 
     </head>
     <body class="animsition" >

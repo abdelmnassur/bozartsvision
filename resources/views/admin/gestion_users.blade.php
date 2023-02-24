@@ -44,8 +44,8 @@
             <div class="row m-t-5">
                 <div class="col-md-12">
                     <!-- DATA TABLE-->
-                    <div class="table-responsive m-b-40">
-                        <table class="table table-borderless table-data3">
+                    <div class="table-responsive m-b-40" >
+                        <table class="table table-borderless table-data3 center-elements">
                             <thead>
                                 <tr>
                                     <th>Prenom</th>
@@ -61,20 +61,21 @@
                                         <td> {{ $user->prenom }} </td>
                                         <td> {{ $user->telephone }} </td>
                                         <td> {{ $user->email }} </td>
-                                        <td> {{ $user->status }} </td>
                                         <td>
-                                    
-                                                
-                                                <div class="card-body">
-                                                    <label class="switch switch-text switch-success switch-pill">
-                                                        <input type="checkbox" class="switch-input"
-                                                            @if ($user->status == 1) checked="true" @endif>
-                                                        <span data-on="On" data-off="Off"
-                                                            class="switch-label"></span>
-                                                        <span class="switch-handle"></span>
-                                                    </label>
-                                                </div>
-
+                                            <label class="switch switch-text switch-success switch-pill m-l-0">
+                                                <input type="checkbox" class="switch-input"
+                                                    @if ($user->status == 1) checked="true" @endif>
+                                                <span data-on="On" data-off="Off"
+                                                    class="switch-label"></span>
+                                                <span class="switch-handle"></span>
+                                            </label>
+                                        </td>
+                                        <td>
+                                            <div class="table-data-feature center-elements">
+                                                <a class="item" data-toggle="tooltip" data-placement="top" title="Edit" href="{{ route('show',$user->id ) }}">
+                                                    <i class="zmdi zmdi-edit"></i>
+                                                </a>
+                                            </div>
                                         </td>
                                     </tr>
                                 @endforeach
