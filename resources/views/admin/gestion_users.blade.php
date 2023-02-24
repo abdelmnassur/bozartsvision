@@ -14,9 +14,9 @@
                             <div class="filters m-b-5 col-md-6">
                                 <div class="rs-select2--dark rs-select2--md m-r-10 rs-select2--border">
                                     <select class="js-select2" name="property">
-                                        <option selected="selected">All Properties</option>
-                                        <option value="">Products</option>
-                                        <option value="">Services</option>
+                                        <option selected="selected">All Users</option>
+                                        <option value="">Activer</option>
+                                        <option value="">Desactiver</option>
                                     </select>
                                     <div class="dropDownSelect2"></div>
                                 </div>

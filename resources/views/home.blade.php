@@ -8,21 +8,33 @@
             </div>
             <h1 class="text-center">Vous etes sur le logiciel de gestion des artistes du Burkina</h1>
 
-            <div class="card-footer">
-                <a class="btn btn-primary btn-sm" href="{{ route('login') }}">
-                    <i class="fa fa-user"></i> CONNEXION
-                </a>
-                <a class="btn btn-danger btn-sm" href="{{ route('register') }}" >
-                    <i class="fa fa-ban"></i> INSCRIPTION
-                </a>
+
+            <div class="card">
+                <div class="card-header">
+                    <strong>Active Buttons </strong>
+                </div>
+                <div class="card-body">
+                    <a class="btn btn-primary btn-lg btn-block" href="{{ route('login') }}"><i class="fa fa-user"></i> CONNEXION</a>
+                    <a class="btn btn-primary btn-lg btn-block" href="{{ route('register') }}"><i class="fa fa-user"></i> INSCRIPTION</a>
+                </div>
             </div>
 
-            {{-- <div class="login-wrap">
-                <div class="login-content mt-5">
-                    <a >CONNEXION</a> <br>
-                    <a >INSCRIPTION</a>
+            <div class="card">
+                <div class="card-header">
+                  <strong class="card-title">Information</strong>
                 </div>
-            </div> --}}
+
+                <div class="card-body">
+                  <div class="typo-headers">
+                    Information
+                  </div>
+                  <div class="typo-articles">
+                    <p>
+                      Nous travaillons sur le backend revenez plustard &#128515; !!!
+                    </p>
+                  </div>
+                </div>
+              </div>
         </div>
         <h4 class="text-center text-primary mt-5">Devéloppé par <b><i> Ouedraogo Abdel Nassur</i></b>, Informaticien</h4>
     </div>
