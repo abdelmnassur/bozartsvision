@@ -1,6 +1,5 @@
 <x-admin-basic>
     <!-- MAIN CONTENT-->
-    <div class="main-content">
         <div class="section__content section__content--p30">
             <div class="container-fluid">
                 <div class="row m-t-30">
@@ -20,10 +19,10 @@
                                 <tbody>
                                     @foreach ($artistes as $artiste)
                                     <tr>
-                                        <td> {{ $artiste->prenom }} </td>
-                                        <td> {{ $artiste->telephone }} </td>
-                                        <td> {{ $artiste->email }} </td>
-                                        <td> {{ $artiste->status }} </td>
+                                        <td> {{ $artiste }} </td>
+                                        <td> {{ $artiste }} </td>
+                                        <td> {{ $artiste }} </td>
+                                        <td> {{ $artiste }} </td>
                                         <td>
                                             @if ($artiste->status)
                                                 <div class="card-body">
@@ -54,5 +53,4 @@
                 </div>
             </div>
         </div>
-    </div>
 </x-admin-basic>

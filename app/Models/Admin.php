@@ -13,7 +13,8 @@ class Admin extends Model
     ];
     use HasFactory;
 
-    public function user(): BelongsTo {
+    public function user(): BelongsTo
+    {
         $this->belongsTo(User::class, 'user_id');
     }
 }
