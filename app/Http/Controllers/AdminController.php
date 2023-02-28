@@ -15,7 +15,6 @@ class AdminController extends Controller
     public function admin_dashboard()
     {
         $admins = Admin::all();
-        //$users = User::all();
         $users = DB::select('Select * from users where id not in (select user_id from admins);');
         $artistes = Artiste::all();
         return view('admin/admin_dashboard', compact('users', 'artistes', 'admins'));
