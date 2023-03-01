@@ -8,7 +8,7 @@
                     <a class="col-md-6 col-lg-3" href="{{ route('admin_gestion_users') }}">
                         <div class="statistic__item">
                             <h2 class="number">{{ count($users) }}</h2>
-                            <span class="desc">Utilisateurs</span>
+                            <span class="desc">Tous les utilisateurs</span>
                             <div class="icon">
                                 <i class="zmdi zmdi-account-o"></i>
                             </div>

@@ -50,6 +50,7 @@ Route::get('home1', [MainController::class, 'home1'])->name('home1');
 
 /* Route liées à ADMIN */
 Route::get('admin_dashboard', [AdminController::class, 'admin_dashboard'])->name('admin_dashboard')->middleware(['auth']);
+Route::put('admin/desactiver_activer/', [AdminController::class, 'desactiverActiver'])->name('admin_activer_desactiver')->middleware(['auth']);
 Route::get('admin_gestion_users', [AdminController::class, 'admin_gestion_users'])->name('admin_gestion_users')->middleware(['auth']);
 Route::get('admin_gestion_artistes', [AdminController::class, 'admin_gestion_artistes'])->name('admin_gestion_artistes')->middleware(['auth']);
 Route::get('showUser/{id}', [UserController::class, 'show'])->name('show')->middleware(['auth']);

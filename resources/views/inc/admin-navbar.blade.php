@@ -11,13 +11,17 @@
                 <img src="{{ asset('template/images/icon/avatar-big-01.jpg') }}" alt="John Doe" />
             </div>
             <h4 class="name">{{ Auth()->user()->prenom }}</h4>
-            <a href="#">Sign out</a>
+            <a onClick="event.preventDefault(); document.getElementById('deconnection').submit()" href="#">Fermer la session</a>
+            <form action="{{ route('logout') }}" method="post" id="deconnection">
+                @csrf
+                @method('post')
+            </form>
         </div>
         <nav class="navbar-sidebar2">
             <ul class="list-unstyled navbar__list">
                 <li class="active has-sub">
                     <a class="js-arrow" href="#">
-                        <i class="fas fa-tachometer-alt"></i>Dashboard
+                        <i class="fas fa-tachometer-alt"></i>ACCUEIL
                         <span class="arrow">
                             <i class="fas fa-angle-down"></i>
                         </span>

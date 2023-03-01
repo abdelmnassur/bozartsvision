@@ -52,11 +52,11 @@ class User extends Authenticatable
     ];
 
 
-    public function admin() : HasMany {
+    public function admins() {
         $this->hasMany(Admin::class);
     }
 
-    public function artiste(): HasOne {
-        $this->hasOne(Artiste::class);
+    public function artiste() {
+        $this->belongsTo(Artiste::class);
     }
 }
