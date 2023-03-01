@@ -25,14 +25,9 @@
                 </div>
 
                 <div class="card-body">
-                  <div class="typo-headers">
-                    Information
-                  </div>
-                  <div class="typo-articles">
-                    <p>
-                      Nous travaillons sur le backend revenez plustard <big>&#128515;</big> !!!
-                    </p>
-                  </div>
+                  <p style="font-size: 80px">
+                    Nous travaillons sur le backend revenez plustard &#128515; !!!
+                  </p>
                 </div>
               </div>
         </div>

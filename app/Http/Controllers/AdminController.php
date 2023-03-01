@@ -15,16 +15,14 @@ class AdminController extends Controller
     public function admin_dashboard()
     {
         $admins = Admin::all();
-        $users = User::all();
-        //dd($admins[0]->user);
-        //$users = DB::select('SELECT * FROM users MINUS (SELECT u.* FROM users u, admins a WHERE a.user_id=u.id UNION SELECT u.* FROM users u,artistes t WHERE t.user_id=u.id)');
+        $users = DB::select('Select * from users where id not in (select user_id from admins);');
         $artistes = Artiste::all();
         return view('admin/admin_dashboard', compact('users', 'artistes', 'admins'));
     }
 
     public function admin_gestion_users()
     {
-        $users = User::all();
+        $users = DB::select('Select * from users where id not in (select user_id from admins);');
         return view('admin/gestion_users', compact('users'));
     }
 
